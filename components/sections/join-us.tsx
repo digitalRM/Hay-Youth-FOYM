@@ -5,7 +5,7 @@ export default function JoinUs() {
   return (
     <div className="overflow-hidden bg-white py-24 sm:py-32 bg-[url('/leftStack.png')] backdrop-opacity-20 bg-cover bg-center -mt-12 sm:mt-0">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
           <div className="lg:pr-4 lg:pt-4">
             <div className="lg:max-w-lg mt-12">
               <h2 className="text-base/7 font-semibold text-green-700">
