@@ -129,7 +129,7 @@ export default function Hero() {
             <h1 className="text-balance text-5xl font-semibold tracking-tighter text-green-950 sm:text-7xl">
               Empowering Youth. Building Tomorrow.
             </h1>
-            <p className="mt-8 text-pretty text-lg font-medium text-neutral-500 sm:text-xl/8">
+            <p className="mt-8 text-balance text-lg font-medium text-neutral-500 sm:text-xl/8 px-6 sm:px-0">
               We encourage young people to better their communities by using
               their skills through youth-focused events, tutoring sessions, and
               challenges.
