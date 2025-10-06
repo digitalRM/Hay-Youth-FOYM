@@ -73,11 +73,7 @@ export default function Hero() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img
-                  alt=""
-                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                  className="h-8 w-auto"
-                />
+                <img alt="" src="/HayGreenLogo.png" className="h-6 w-auto" />
               </a>
               <button
                 type="button"
@@ -102,12 +98,12 @@ export default function Hero() {
                   ))}
                 </div>
                 <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-neutral-900 hover:bg-neutral-50"
+                  <Button
+                    variant="outline"
+                    className="rounded-full text-green-950 w-full"
                   >
-                    Log in
-                  </a>
+                    Donate to our cause
+                  </Button>
                 </div>
               </div>
             </div>
@@ -115,7 +111,7 @@ export default function Hero() {
         </Dialog>
       </header>
 
-      <div className="relative isolate px-6 pt-6 lg:px-0">
+      <div className="relative isolate pt-6">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center -mt-10">
             <div className="relative rounded-full px-3 pr-0.5 py-1 text-sm/6 text-neutral-600 ring-1 ring-green-900/10 hover:ring-green-900/20">
@@ -138,12 +134,12 @@ export default function Hero() {
               their skills through youth-focused events, tutoring sessions, and
               challenges.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-3">
-              <Button className="bg-green-950 text-white rounded-lg">
+            <div className="mt-10 flex items-center justify-center gap-3 flex-col sm:flex-row px-6 sm:px-0">
+              <Button className="bg-green-950 text-white rounded-lg w-full sm:w-auto">
                 Learn about our mission
               </Button>
               <Button
-                className="border-green-950/15 text-green-950 rounded-lg"
+                className="border-green-950/15 text-green-950 rounded-lg w-full sm:w-auto"
                 variant="outline"
               >
                 Donate to our cause

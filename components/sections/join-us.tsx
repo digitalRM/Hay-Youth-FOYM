@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function JoinUs() {
   return (
-    <div className="overflow-hidden bg-white py-24 sm:py-32 mt-12 bg-[url('/leftStack.png')] backdrop-opacity-20 bg-cover bg-center">
+    <div className="overflow-hidden bg-white py-24 sm:py-32 bg-[url('/leftStack.png')] backdrop-opacity-20 bg-cover bg-center -mt-12 sm:mt-0">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
           <div className="lg:pr-4 lg:pt-4">
@@ -25,13 +25,13 @@ export default function JoinUs() {
                 a difference in the lives of people in your community!
               </p>
               <div className="mt-8">
-                <Button className="bg-green-950 text-white rounded-lg">
+                <Button className="bg-green-950 text-white rounded-lg w-full sm:w-auto">
                   Register as a volunteer
                 </Button>
               </div>
             </div>
           </div>
-          <div className="aspect-square rounded-3xl overflow-hidden p-2  border border-white bg-white/30 backdrop-blur-md">
+          <div className="aspect-square rounded-3xl overflow-hidden sm:p-2  border border-white bg-white/30 backdrop-blur-md">
             <img
               src="/hands.png"
               alt="Join Us"
