@@ -1,0 +1,45 @@
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+
+export default function JoinUs() {
+  return (
+    <div className="overflow-hidden bg-white py-24 sm:py-32 mt-12 bg-[url('/leftStack.png')] backdrop-opacity-20 bg-cover bg-center">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
+          <div className="lg:pr-4 lg:pt-4">
+            <div className="lg:max-w-lg mt-12">
+              <h2 className="text-base/7 font-semibold text-green-700">
+                Volunteers Needed
+              </h2>
+              <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-green-950 sm:text-5xl">
+                Join Our Mission.
+              </p>
+              <p className="mt-6 text-lg/8 text-neutral-700">
+                We are always looking for volunteers to help us with our events
+                and programs. Be part of a youth-led movement that empowers
+                young people to design, inspire, and serve their communities.
+                <br />
+                <br />
+                Together, we can create lasting change and build stronger
+                connections that transform lives. By volunteering, you can make
+                a difference in the lives of people in your community!
+              </p>
+              <div className="mt-8">
+                <Button className="bg-green-950 text-white rounded-lg">
+                  Register as a volunteer
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div className="aspect-square rounded-3xl overflow-hidden p-2  border border-white bg-white/30 backdrop-blur-md">
+            <img
+              src="/hands.png"
+              alt="Join Us"
+              className="object-cover h-full w-full rounded-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
