@@ -24,7 +24,7 @@ export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white min-h-[1200px] h-full bg-[url('/backgroundGreen.png')] bg-cover bg-center">
+    <div className="bg-white min-h-[1200px] h-full bg-[url('/backgroundBlue.png')] bg-cover bg-center">
       <header className="absolute max-w-6xl mx-auto inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
@@ -32,8 +32,12 @@ export default function Hero() {
         >
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img alt="" src="/HayGreenLogo.png" className="h-6 w-auto" />
+              <span className="sr-only">Hay Assocation for Youth</span>
+              <img
+                alt="Hay Assocation for Youth"
+                src="/HayBlueLogo.png"
+                className="h-6 w-auto"
+              />
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -58,7 +62,7 @@ export default function Hero() {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Button variant="outline" className="rounded-full text-green-950">
+            <Button variant="outline" className="rounded-full text-blue-950">
               Donate to our cause
             </Button>
           </div>
@@ -72,8 +76,12 @@ export default function Hero() {
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-neutral-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
-                <img alt="" src="/HayGreenLogo.png" className="h-6 w-auto" />
+                <span className="sr-only">Hay Assocation for Youth</span>
+                <img
+                  alt="Hay Assocation for Youth"
+                  src="/HayBlueLogo.png"
+                  className="h-6 w-auto"
+                />
               </a>
               <button
                 type="button"
@@ -100,7 +108,7 @@ export default function Hero() {
                 <div className="py-6">
                   <Button
                     variant="outline"
-                    className="rounded-full text-green-950 w-full"
+                    className="rounded-full text-blue-950 w-full"
                   >
                     Donate to our cause
                   </Button>
@@ -114,11 +122,11 @@ export default function Hero() {
       <div className="relative isolate pt-6">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center -mt-10">
-            <div className="relative rounded-full px-3 pr-0.5 py-1 text-sm/6 text-neutral-600 ring-1 ring-green-900/10 hover:ring-green-900/20">
+            <div className="relative rounded-full px-3 pr-0.5 py-1 text-sm/6 text-neutral-600 ring-1 ring-blue-900/10 hover:ring-blue-900/20">
               Sign up as a volunteer today.
               <a
                 href="#"
-                className="font-semibold text-green-800 rounded-full border p-1 px-3 ml-2"
+                className="font-semibold text-blue-800 rounded-full border p-1 px-3 ml-2"
               >
                 <span aria-hidden="true" className="absolute inset-0" />
                 Register now
@@ -126,7 +134,7 @@ export default function Hero() {
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-balance text-5xl font-semibold tracking-tighter text-green-950 sm:text-7xl">
+            <h1 className="text-balance text-5xl font-semibold tracking-tighter text-blue-950 sm:text-7xl">
               Empowering Youth. Building Tomorrow.
             </h1>
             <p className="mt-8 text-balance text-lg font-medium text-neutral-500 sm:text-xl/8 px-6 sm:px-0">
@@ -135,11 +143,11 @@ export default function Hero() {
               challenges.
             </p>
             <div className="mt-10 flex items-center justify-center gap-3 flex-col sm:flex-row px-6 sm:px-0">
-              <Button className="bg-green-950 text-white rounded-lg w-full sm:w-auto">
+              <Button className="bg-blue-950 text-white rounded-lg w-full sm:w-auto">
                 Learn about our mission
               </Button>
               <Button
-                className="border-green-950/15 text-green-950 rounded-lg w-full sm:w-auto"
+                className="border-blue-950/15 text-blue-950 rounded-lg w-full sm:w-auto"
                 variant="outline"
               >
                 Donate to our cause
@@ -165,7 +173,7 @@ export default function Hero() {
                         alt={`Gallery image ${i + 1}`}
                         width={700}
                         height={700}
-                        quality={25}
+                        quality={100}
                         className="object-cover rounded-lg object-right-bottom transition-all duration-150"
                         priority={i === 0}
                       />
