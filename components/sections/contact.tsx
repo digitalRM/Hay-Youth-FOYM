@@ -37,24 +37,6 @@ export default function ContactUs() {
                     </div>
                   </dl>
                 </div>
-                <div className="rounded-2xl border border-blue-950/10 p-6">
-                  <h3 className="text-base/7 font-semibold text-blue-950">
-                    Volunteer
-                  </h3>
-                  <dl className="mt-2 space-y-1 text-sm/6 text-blue-950">
-                    <div>
-                      <dt className="sr-only">Email</dt>
-                      <dd>
-                        <a
-                          href="mailto:volunteer@hayyouth.org"
-                          className="font-semibold text-blue-500"
-                        >
-                          volunteer@hayyouth.org
-                        </a>
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
               </div>
               <form
                 action="#"

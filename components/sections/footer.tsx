@@ -1,3 +1,5 @@
+"use client";
+
 const navigation = {
   programs: [
     { name: "Youth Stage", href: "#" },
@@ -52,82 +54,40 @@ const navigation = {
 export default function Footer() {
   return (
     <footer className="bg-white">
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <img
-            alt="Harmony Association for Youth Logo"
-            src="/HayBlueLogo.png"
-            className="h-8 w-auto object-contain"
-          />
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="hidden sm:grid"></div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm/6 font-semibold text-gray-900">
-                  Programs
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.programs.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm/6 text-gray-600 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm/6 font-semibold text-gray-900">
-                  Support
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.support.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm/6 text-gray-600 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+      <div className="mx-auto max-w-7xl px-6 pb-8 pt-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 border-t border-gray-900/10 pt-8">
+          <div className="flex items-center gap-8">
+            <img
+              alt="Harmony Association for Youth Logo"
+              src="/HayBlueLogo.png"
+              className="h-8 w-auto object-contain"
+            />
+            <div className="flex gap-x-6">
+              {navigation.social.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-600 hover:text-gray-800"
+                >
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon aria-hidden="true" className="size-6" />
+                </a>
+              ))}
             </div>
           </div>
-        </div>
-        <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24 lg:flex lg:items-center lg:justify-between">
-          <div>
-            <h3 className="text-sm/6 font-semibold text-gray-900">
-              About Our Organization
-            </h3>
-            <p className="mt-2 text-sm/6 text-gray-600 text-balance">
-              Harmony Association for Youth (HAY) is a WA registered 501(c)(3)
-              non-profit organization designated to provide an avenue for more
-              opportunities and activities to youths to aid their development of
-              talent and skill in areas including performance, art, and
-              academics.
-            </p>
-          </div>
-        </div>
-        <div className="mt-8 border-t border-gray-900/10 pt-8 md:flex md:items-center md:justify-between">
-          <div className="flex gap-x-6 md:order-2">
-            {navigation.social.map((item) => (
+          <div className="flex flex-wrap justify-center gap-4">
+            {[...navigation.programs, ...navigation.support].map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-600 hover:text-gray-800"
+                className="text-sm/6 text-gray-600 hover:text-gray-900"
               >
-                <span className="sr-only">{item.name}</span>
-                <item.icon aria-hidden="true" className="size-6" />
+                {item.name}
               </a>
             ))}
           </div>
-          <p className="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0">
-            &copy; {new Date().getFullYear()} Harmony Association for Youth. All
+          <p className="text-sm/6 text-gray-600">
+            &copy; 2024 Harmony Association for Youth. All
             rights reserved.
           </p>
         </div>

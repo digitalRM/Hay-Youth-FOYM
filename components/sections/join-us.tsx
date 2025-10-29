@@ -12,17 +12,10 @@ export default function JoinUs() {
                 Volunteers Needed
               </h2>
               <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-blue-950 sm:text-5xl">
-                Join Our Mission.
+                Our Mission
               </p>
               <p className="mt-6 text-lg/8 text-neutral-700">
-                We are always looking for volunteers to help us with our events
-                and programs. Be part of a youth-led movement that empowers
-                young people to design, inspire, and serve their communities.
-                <br />
-                <br />
-                Together, we can create lasting change and build stronger
-                connections that transform lives. By volunteering, you can make
-                a difference in the lives of people in your community!
+              HAY Youth is  platform created, organized, and led by youth, designed to most effectively inspire their peers to use their talents and passion to serve the community. Here, young people form deep connections with the community, inspire one another, and grow together into better versions of themselves through contribution and creation. Every young person is seen as a valued designer and co-builder of the community.
               </p>
               <div className="mt-8">
                 <Button className="bg-blue-950 text-white rounded-lg w-full sm:w-auto">
