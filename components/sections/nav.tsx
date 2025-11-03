@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -14,26 +14,12 @@ const navigation = [
 
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${
-          isScrolled ? 'top-4 px-4 lg:px-[5vw]' : 'top-0'
-        }`}>
+    <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-sm shadow-lg">
         <nav
           aria-label="Global"
-          className={`flex items-center justify-between p-6 lg:px-8 mx-auto transition-all duration-500 ease-in-out ${
-            isScrolled ? 'rounded-full bg-white/80 backdrop-blur-sm shadow-lg max-w-7xl' : ''
-          }`}
+          className="flex items-center justify-between p-6 lg:px-8 mx-auto max-w-7xl"
       >
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
@@ -41,7 +27,7 @@ export default function Nav() {
             <img
               alt="Hay Assocation for Youth"
               src="/HayBlueLogo.png"
-              className={`w-auto transition-all duration-300 ${isScrolled ? "h-5" : "h-6"}`}
+              className="w-auto h-6"
             />
           </a>
         </div>
@@ -60,16 +46,14 @@ export default function Nav() {
             <a
               key={item.name}
               href={item.href}
-              className={`font-semibold text-neutral-900 hover:text-blue-950 transition-all duration-300 ${
-                isScrolled ? "text-[13px]/6" : "text-sm/6"
-              }`}
+              className="text-lg font-semibold text-neutral-900 hover:text-blue-950 transition-colors"
             >
               {item.name}
             </a>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button variant="outline" className="rounded-full text-blue-950">
+          <Button variant="outline" className="rounded-full text-blue-950 text-base px-6 py-2">
             Donate to our cause
           </Button>
         </div>
@@ -106,7 +90,7 @@ export default function Nav() {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-neutral-900 hover:bg-neutral-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-lg font-semibold text-neutral-900 hover:bg-neutral-50"
                   >
                     {item.name}
                   </a>
@@ -115,7 +99,7 @@ export default function Nav() {
               <div className="py-6">
                 <Button
                   variant="outline"
-                  className="rounded-full text-blue-950 w-full"
+                  className="rounded-full text-blue-950 w-full text-base py-2"
                 >
                   Donate to our cause
                 </Button>

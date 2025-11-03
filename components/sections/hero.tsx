@@ -1,143 +1,30 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Dialog, DialogPanel } from "@headlessui/react";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
+import Nav from "@/components/sections/nav";
 
 const sliderImages = ["/1.png", "/2.png", "/3.png"];
 
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Our Team", href: "/members" },
-  { name: "Events", href: "#" },
-  { name: "Youth Volunteer", href: "#" },
-];
-
 export default function Hero() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
-    
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div className="bg-white min-h-[1200px] h-full bg-[url('/backgroundBlue.png')] bg-cover bg-center">
-      <header className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${
-          isScrolled ? 'top-4 px-4 lg:px-[5vw]' : 'top-0'
-        }`}>
-        <nav
-          aria-label="Global"
-          className={`flex items-center justify-between p-6 lg:px-8 mx-auto transition-all duration-500 ease-in-out ${
-            isScrolled ? 'rounded-full bg-white/80 backdrop-blur-sm shadow-lg max-w-7xl' : ''
-          }`}
-        >
-          <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Hay Assocation for Youth</span>
-              <img
-                alt="Hay Assocation for Youth"
-                src="/HayBlueLogo.png"
-                className="h-6 w-auto"
-              />
-            </a>
-          </div>
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-neutral-700"
-            >
-              <span className="sr-only">Open main menu</span>
-              <Menu aria-hidden="true" className="size-6" />
-            </button>
-          </div>
-          <div className="hidden lg:flex lg:gap-x-8">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm/6 font-semibold text-neutral-900"
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Button variant="outline" className="rounded-full text-blue-950">
-              Donate to our cause
-            </Button>
-          </div>
-        </nav>
-        <Dialog
-          open={mobileMenuOpen}
-          onClose={setMobileMenuOpen}
-          className="lg:hidden"
-        >
-          <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-neutral-900/10">
-            <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Hay Assocation for Youth</span>
-                <img
-                  alt="Hay Assocation for Youth"
-                  src="/HayBlueLogo.png"
-                  className="h-6 w-auto"
-                />
-              </a>
-              <button
-                type="button"
-                onClick={() => setMobileMenuOpen(false)}
-                className="-m-2.5 rounded-md p-2.5 text-neutral-700"
-              >
-                <span className="sr-only">Close menu</span>
-                <X aria-hidden="true" className="size-6" />
-              </button>
-            </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-neutral-500/10">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-neutral-900 hover:bg-neutral-50"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-                <div className="py-6">
-                  <Button
-                    variant="outline"
-                    className="rounded-full text-blue-950 w-full"
-                  >
-                    Donate to our cause
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </DialogPanel>
-        </Dialog>
-      </header>
+      <Nav />
 
-      <div className="relative isolate pt-6">
+      <div className="relative isolate pt-24">
         <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:py-32">
           <div className="text-center">
             <h1 className="text-balance text-5xl font-semibold tracking-tighter text-blue-950 sm:text-7xl">
