@@ -68,7 +68,9 @@ export default function Hero() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@HarmonyAssociationforYouth"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-950/70 hover:text-blue-950 transition-all p-2 rounded-full border border-blue-950/20 hover:border-blue-950/40"
               >
                 <span className="sr-only">YouTube</span>

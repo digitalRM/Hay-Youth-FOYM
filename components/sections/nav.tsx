@@ -9,7 +9,7 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Our Team", href: "/members" },
   { name: "Events", href: "#" },
-  { name: "Youth Volunteer", href: "#" },
+  { name: "Youth Volunteer", href: "/volunteer" },
 ];
 
 export default function Nav() {
@@ -27,7 +27,7 @@ export default function Nav() {
             <img
               alt="Hay Assocation for Youth"
               src="/HayBlueLogo.png"
-              className="w-auto h-6"
+              className="w-auto h-12"
             />
           </a>
         </div>
@@ -71,7 +71,7 @@ export default function Nav() {
               <img
                 alt="Hay Assocation for Youth"
                 src="/HayBlueLogo.png"
-                className="h-6 w-auto"
+                className="h-12 w-auto"
               />
             </a>
             <button

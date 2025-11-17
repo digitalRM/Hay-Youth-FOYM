@@ -37,7 +37,7 @@ const navigation = {
     },
     {
       name: "YouTube",
-      href: "#",
+      href: "https://www.youtube.com/@HarmonyAssociationforYouth",
       icon: (props: React.SVGProps<SVGSVGElement>) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -55,13 +55,31 @@ export default function Footer() {
   return (
     <footer className="bg-white">
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 border-t border-gray-900/10 pt-8">
-          <div className="flex items-center gap-8">
-            <img
-              alt="Harmony Association for Youth Logo"
-              src="/HayBlueLogo.png"
-              className="h-8 w-auto object-contain"
-            />
+        <div className="border-t border-gray-900/10 pt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-4">
+            <div className="flex items-center">
+              <img
+                alt="Harmony Association for Youth Logo"
+                src="/HayBlueLogo.png"
+                className="h-8 w-auto object-contain"
+              />
+            </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              {[...navigation.programs, ...navigation.support].map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-sm/6 text-gray-600 hover:text-gray-900"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm/6 text-gray-600">
+              &copy; 2024 Harmony Association for Youth. All rights reserved.
+            </p>
             <div className="flex gap-x-6">
               {navigation.social.map((item) => (
                 <a
@@ -75,21 +93,6 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="flex flex-wrap justify-center gap-4">
-            {[...navigation.programs, ...navigation.support].map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm/6 text-gray-600 hover:text-gray-900"
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-          <p className="text-sm/6 text-gray-600">
-            &copy; 2024 Harmony Association for Youth. All
-            rights reserved.
-          </p>
         </div>
       </div>
     </footer>
