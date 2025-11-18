@@ -27,8 +27,8 @@ export default function Hero() {
       <div className="relative isolate pt-24">
         <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:py-32">
           <div className="text-center">
-            <h1 className="text-balance text-5xl font-semibold tracking-tighter text-blue-950 sm:text-7xl max-w-4xl mx-auto leading-tight">
-            Youth-Led Platform to Design,<br />Inspire, and Serve the Community
+            <h1 className="text-balance text-4xl font-semibold tracking-tighter text-blue-950 sm:text-6xl max-w-5xl mx-auto leading-tight">
+            Youth-Led Platform to Design, Inspire,<br />and Serve the Community
             </h1>
             <p className="mt-6 text-balance text-lg font-medium text-neutral-500 sm:text-xl/8 px-6 sm:px-0">
             Harmony in Action: Connected by Music, Led by Youth
