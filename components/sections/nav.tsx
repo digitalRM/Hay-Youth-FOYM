@@ -16,7 +16,7 @@ export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-sm shadow-lg">
+    <header className="fixed top-0 w-full z-50 bg-white shadow-lg">
         <nav
           aria-label="Global"
           className="flex items-center justify-between p-6 lg:px-8 mx-auto max-w-7xl"
@@ -53,7 +53,7 @@ export default function Nav() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button variant="outline" className="rounded-full text-blue-950 text-base px-6 py-2">
+          <Button className="rounded-full bg-blue-950 text-white text-base px-6 py-2">
             Donate to our cause
           </Button>
         </div>
@@ -98,10 +98,9 @@ export default function Nav() {
               </div>
               <div className="py-6">
                 <Button
-                  variant="outline"
-                  className="rounded-full text-blue-950 w-full text-base py-2"
+                  className="rounded-full bg-blue-950 text-white w-full text-base py-2"
                 >
-                  Donate to our cause
+                  Our Events
                 </Button>
               </div>
             </div>
