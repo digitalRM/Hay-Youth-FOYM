@@ -4,10 +4,19 @@ import { Linkedin, Twitter, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const leadershipTeam = [
+const hayTeam = [
+  {
+    name: "Carolyn Xu",
+    role: "Youth Leader",
+    description: "Carolyn Xu has been an active member of HAY since its inception, contributing significantly to the organization's development and growth. She is passionate about music and enjoys playing both the piano and violin, as well as exploring photography and creating vibrant handmade crafts. Carolyn helps organize youth music events that give back to the community and foster meaningful connections through music. She also manages and updates HAY's YouTube channel, using her creativity to produce and edit videos that capture and preserve special moments. Proud to be part of HAY's journey, Carolyn remains dedicated to helping the organization grow and strengthen the community through creativity and collaboration.",
+    funFact: "Loves music, photography, and creating handmade crafts",
+    linkedin: "", // To be provided later
+    twitter: "", // To be provided later
+    imageSrc: "/Carolyn.png",
+  },
   {
     name: "Felix Wu",
-    role: "Web Team Leader",
+    role: "Youth Leader",
     description: "", // To be provided later
     funFact: "Passionate about technology and community impact",
     linkedin: "", // To be provided later
@@ -15,43 +24,31 @@ const leadershipTeam = [
     imageSrc: undefined,
   },
   {
-    name: "Hellen",
-    role: "Leadership Team",
+    name: "Helen",
+    role: "Youth Leader",
     description: "", // To be provided later
     funFact: "Dedicated to empowering youth voices",
     linkedin: "", // To be provided later
     twitter: "", // To be provided later
-    imageSrc: undefined,
-  },
-  {
-    name: "Carolyn Xu",
-    role: "Leadership Team",
-    description: "Carolyn Xu has been an active member of HAY since its inception, contributing significantly to the organization's development and growth. She is passionate about music and enjoys playing both the piano and violin, as well as exploring photography and creating vibrant handmade crafts. Carolyn helps organize youth music events that give back to the community and foster meaningful connections through music. She also manages and updates HAY's YouTube channel, using her creativity to produce and edit videos that capture and preserve special moments. Proud to be part of HAY's journey, Carolyn remains dedicated to helping the organization grow and strengthen the community through creativity and collaboration.",
-    funFact: "Loves music, photography, and creating handmade crafts",
-    linkedin: "", // To be provided later
-    twitter: "", // To be provided later
-    imageSrc: undefined,
-  },
-];
-
-const webTeam = [
-  {
-    name: "Jeffery",
-    role: "Web Team Manager",
-    description: "", // To be provided later
-    funFact: "Tech enthusiast and problem solver",
-    linkedin: "", // To be provided later
-    twitter: "", // To be provided later
-    imageSrc: undefined,
+    imageSrc: "/Helen.png",
   },
   {
     name: "Tristan",
-    role: "Web Team Manager",
+    role: "Youth Leader",
     description: "", // To be provided later
     funFact: "Committed to building innovative solutions",
     linkedin: "", // To be provided later
     twitter: "", // To be provided later
-    imageSrc: undefined,
+    imageSrc: "/tristan.png",
+  },
+  {
+    name: "Jeffrey",
+    role: "Youth Leader",
+    description: "", // To be provided later
+    funFact: "Tech enthusiast and problem solver",
+    linkedin: "", // To be provided later
+    twitter: "", // To be provided later
+    imageSrc: "/Jeffrey.png",
   },
 ];
 
@@ -92,84 +89,13 @@ export default function Members() {
           </p>
         </div>
 
-        {/* Leadership Team Section */}
+        {/* HAY Team Section */}
         <div className="mb-20">
-          <h3 className="text-3xl font-semibold text-blue-950 text-center mb-4">
-            Leadership Team
-          </h3>
           <p className="text-center text-blue-900/70 mb-8 max-w-2xl mx-auto">
-            Our leadership team guides the organization's vision and ensures we stay true to our mission of youth empowerment.
+            Our team is made up of passionate youth leaders committed to building a stronger community through creativity, innovation, and service.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {leadershipTeam.map((member) => (
-              <div
-                key={member.name}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:shadow-xl hover:border-white/40 transition-all text-center"
-              >
-                <div className="relative w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
-                  {member.imageSrc ? (
-                    <Image
-                      src={member.imageSrc}
-                      alt={`${member.name}'s profile`}
-                      fill
-                      className="object-cover"
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-blue-500/20 flex items-center justify-center">
-                      <span className="text-4xl font-semibold text-blue-950">
-                        {member.name.charAt(0)}
-                      </span>
-                    </div>
-                  )}
-                </div>
-                <h4 className="text-xl font-semibold text-blue-950 mb-1">
-                  {member.name}
-                </h4>
-                <p className="text-blue-900/70 mb-3">{member.role}</p>
-                {member.funFact && (
-                  <p className="text-sm text-blue-900/60 mb-4">
-                    {member.funFact}
-                  </p>
-                )}
-                <div className="flex justify-center gap-3">
-                  {member.linkedin && (
-                    <Link
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${member.name}'s LinkedIn profile`}
-                      className="text-blue-900/70 hover:text-blue-950 transition-colors"
-                    >
-                      <Linkedin className="size-5" />
-                    </Link>
-                  )}
-                  {member.twitter && (
-                    <Link
-                      href={member.twitter}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${member.name}'s Twitter profile`}
-                      className="text-blue-900/70 hover:text-blue-950 transition-colors"
-                    >
-                      <Twitter className="size-5" />
-                    </Link>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Tech/Web Team Section */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-semibold text-blue-950 text-center mb-4">
-            Tech Team
-          </h3>
-          <p className="text-center text-blue-900/70 mb-8 max-w-2xl mx-auto">
-            Our technical team builds and maintains the digital infrastructure that enables HAY to reach and serve our community effectively.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {webTeam.map((member) => (
+            {hayTeam.map((member) => (
               <div
                 key={member.name}
                 className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:shadow-xl hover:border-white/40 transition-all text-center"

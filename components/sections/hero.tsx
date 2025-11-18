@@ -21,17 +21,17 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="bg-white min-h-[1200px] h-full bg-[url('/backgroundBlue.png')] bg-cover bg-center">
+    <div className="bg-blue-50 min-h-[1200px] h-full bg-[url('/backgroundBlue.png')] bg-cover bg-center">
       <Nav />
 
       <div className="relative isolate pt-24">
         <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:py-32">
           <div className="text-center">
-            <h1 className="text-balance text-5xl font-semibold tracking-tighter text-blue-950 sm:text-7xl">
-            HAY Youth: Designers and Co-Builders of the Community
+            <h1 className="text-balance text-5xl font-semibold tracking-tighter text-blue-950 sm:text-7xl max-w-4xl mx-auto leading-tight">
+            Youth-Led Platform to Design,<br />Inspire, and Serve the Community
             </h1>
             <p className="mt-6 text-balance text-lg font-medium text-neutral-500 sm:text-xl/8 px-6 sm:px-0">
-            A Youth-Led Platform to Design, Inspire, and Serve the Community
+            Harmony in Action: Connected by Music, Led by Youth
             </p>
             <div className="mt-8 flex items-center justify-center gap-3 flex-col sm:flex-row px-6 sm:px-0">
               <Button className="bg-blue-950 text-white rounded-lg w-full sm:w-auto">
