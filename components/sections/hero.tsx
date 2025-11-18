@@ -25,9 +25,9 @@ export default function Hero() {
       <Nav />
 
       <div className="relative isolate pt-24">
-        <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:py-32">
+        <div className="mx-auto max-w-6xl py-16 sm:py-24 lg:py-32">
           <div className="text-center">
-            <h1 className="text-balance text-4xl font-semibold tracking-tighter text-blue-950 sm:text-6xl max-w-5xl mx-auto leading-tight">
+            <h1 className="text-4xl font-semibold tracking-tighter text-blue-950 sm:text-6xl mx-auto leading-tight px-4">
             Youth-Led Platform to Design, Inspire,<br />and Serve the Community
             </h1>
             <p className="mt-6 text-balance text-lg font-medium text-neutral-500 sm:text-xl/8 px-6 sm:px-0">

@@ -27,7 +27,7 @@ export default function Nav() {
             <img
               alt="Hay Assocation for Youth"
               src="/HayBlueLogo.png"
-              className="w-auto h-12"
+              className="w-auto h-10"
             />
           </a>
         </div>
@@ -71,7 +71,7 @@ export default function Nav() {
               <img
                 alt="Hay Assocation for Youth"
                 src="/HayBlueLogo.png"
-                className="h-12 w-auto"
+                className="h-10 w-auto"
               />
             </a>
             <button
