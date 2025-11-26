@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function WhatWeOffer() {
   return (
-    <div className="overflow-hidden bg-blue-50/30 py-24 sm:py-32 backdrop-opacity-20 bg-cover bg-center -mt-12 sm:mt-0 border-y border-blue-950/10">
+    <div className="overflow-hidden bg-blue-50/30 py-12 sm:py-16 backdrop-opacity-20 bg-cover bg-center -mt-12 sm:mt-0 border-y border-blue-950/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
           <p className="text-base/7 font-semibold text-blue-600">

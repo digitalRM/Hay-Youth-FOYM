@@ -56,7 +56,7 @@ export default function Footer() {
     <footer className="bg-blue-50/30">
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-8">
         <div className="border-t border-gray-900/10 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-4">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-4">
             <div className="flex items-center">
               <img
                 alt="Harmony Association for Youth Logo"
@@ -64,16 +64,29 @@ export default function Footer() {
                 className="h-8 w-auto object-contain"
               />
             </div>
-            <div className="flex flex-wrap justify-center gap-4">
-              {[...navigation.programs, ...navigation.support].map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-sm/6 text-gray-600 hover:text-gray-900"
-                >
-                  {item.name}
-                </a>
-              ))}
+            <div className="flex flex-col items-center md:items-start gap-2 flex-1">
+              <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                {navigation.programs.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-sm/6 text-gray-600 hover:text-gray-900"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+              <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                {navigation.support.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-sm/6 text-gray-600 hover:text-gray-900"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">

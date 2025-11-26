@@ -21,7 +21,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="bg-blue-50 min-h-[1200px] h-full bg-[url('/backgroundBlue.png')] bg-cover bg-center">
+    <div className="bg-blue-50 h-full bg-[url('/backgroundBlue.png')] bg-cover bg-center pb-4">
       <Nav />
 
       <div className="relative isolate pt-24">
