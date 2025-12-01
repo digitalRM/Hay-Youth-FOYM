@@ -99,57 +99,57 @@ export default function Members() {
               >
                 {/* Default View */}
                 <div className="group-hover:opacity-0 group-hover:max-h-0 transition-all duration-700 ease-in-out overflow-hidden max-h-[500px] opacity-100">
-                  <div className="relative w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
-                    {member.imageSrc ? (
-                      <Image
-                        src={member.imageSrc}
-                        alt={`${member.name}'s profile`}
-                        fill
-                        className="object-cover"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-blue-500/20 flex items-center justify-center">
-                        <span className="text-4xl font-semibold text-blue-950">
-                          {member.name.charAt(0)}
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                  <h4 className="text-xl font-semibold text-blue-950 mb-1">
-                    {member.name}
-                  </h4>
-                  <p className="text-blue-900/70 mb-3">{member.role}</p>
-                  {member.funFact && (
-                    <p className="text-sm text-blue-900/60 mb-4">
-                      {member.funFact}
-                    </p>
+                <div className="relative w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
+                  {member.imageSrc ? (
+                    <Image
+                      src={member.imageSrc}
+                      alt={`${member.name}'s profile`}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-blue-500/20 flex items-center justify-center">
+                      <span className="text-4xl font-semibold text-blue-950">
+                        {member.name.charAt(0)}
+                      </span>
+                    </div>
                   )}
-                  <div className="flex justify-center gap-3">
-                    {member.linkedin && (
-                      <Link
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${member.name}'s LinkedIn profile`}
-                        className="text-blue-900/70 hover:text-blue-950 transition-colors"
-                      >
-                        <Linkedin className="size-5" />
-                      </Link>
-                    )}
-                    {member.twitter && (
-                      <Link
-                        href={member.twitter}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${member.name}'s Twitter profile`}
-                        className="text-blue-900/70 hover:text-blue-950 transition-colors"
-                      >
-                        <Twitter className="size-5" />
-                      </Link>
-                    )}
-                  </div>
                 </div>
-                
+                <h4 className="text-xl font-semibold text-blue-950 mb-1">
+                  {member.name}
+                </h4>
+                <p className="text-blue-900/70 mb-3">{member.role}</p>
+                {member.funFact && (
+                  <p className="text-sm text-blue-900/60 mb-4">
+                    {member.funFact}
+                  </p>
+                )}
+                <div className="flex justify-center gap-3">
+                  {member.linkedin && (
+                    <Link
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${member.name}'s LinkedIn profile`}
+                      className="text-blue-900/70 hover:text-blue-950 transition-colors"
+                    >
+                      <Linkedin className="size-5" />
+                    </Link>
+                  )}
+                  {member.twitter && (
+                    <Link
+                      href={member.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${member.name}'s Twitter profile`}
+                      className="text-blue-900/70 hover:text-blue-950 transition-colors"
+                    >
+                      <Twitter className="size-5" />
+                    </Link>
+                  )}
+                </div>
+              </div>
+
                 {/* Expanded View on Hover */}
                 <div className="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[2000px] transition-all duration-700 ease-in-out overflow-hidden">
                   <h4 className="text-xl font-semibold text-blue-950 mb-3">

@@ -56,7 +56,7 @@ export default function Footer() {
     <footer className="bg-blue-50/30">
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-8">
         <div className="border-t border-gray-900/10 pt-8">
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-12 mb-4 md:justify-start">
+          <div className="flex flex-col md:flex-row items-center md:items-center gap-12 md:justify-start">
             <div className="flex items-center md:flex-shrink-0">
               <img
                 alt="Harmony Association for Youth Logo"
@@ -64,7 +64,7 @@ export default function Footer() {
                 className="h-8 w-auto object-contain"
               />
             </div>
-            <div className="flex flex-col items-center md:items-start gap-2 md:ml-28 md:mt-2">
+            <div className="flex flex-col items-center md:items-start gap-2 md:ml-28">
               <div className="flex flex-wrap justify-center md:justify-start gap-4">
                 {navigation.programs.map((item) => (
                   <a
@@ -89,7 +89,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 mt-4">
             <p className="text-sm/6 text-gray-600">
               &copy; 2026 Harmony Association for Youth. All rights reserved.
             </p>

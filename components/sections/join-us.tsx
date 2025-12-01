@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export default function JoinUs() {
   return (
-    <div className="overflow-hidden bg-blue-50/50 pt-4 pb-12 sm:pt-4 sm:pb-16 bg-[url('/leftStackBlue.png')] backdrop-opacity-20 bg-cover bg-center">
+    <div data-section="our-mission" className="overflow-hidden bg-blue-50/50 pt-4 pb-12 sm:pt-4 sm:pb-16 bg-[url('/leftStackBlue.png')] backdrop-opacity-20 bg-cover bg-center">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center">
           <div className="lg:pr-4 lg:pt-4">

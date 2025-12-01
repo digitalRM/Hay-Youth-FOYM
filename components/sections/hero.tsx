@@ -34,7 +34,13 @@ export default function Hero() {
             Harmony in Action: Connected by Music, Led by Youth
             </p>
             <div className="mt-8 flex items-center justify-center gap-3 flex-col sm:flex-row px-6 sm:px-0">
-              <Button className="bg-blue-950 text-white rounded-lg w-full sm:w-auto">
+              <Button 
+                className="bg-blue-950 text-white rounded-lg w-full sm:w-auto"
+                onClick={() => {
+                  const element = document.querySelector('[data-section="our-mission"]');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Learn about our mission
               </Button>
               <Button
