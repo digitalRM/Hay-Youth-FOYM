@@ -56,43 +56,21 @@ export default function Footer() {
     <footer className="bg-blue-50/30">
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-8">
         <div className="border-t border-gray-900/10 pt-8">
-          <div className="flex flex-col md:flex-row items-center md:items-center gap-12 md:justify-start">
-            <div className="flex items-center md:flex-shrink-0">
+          <div className="flex flex-col md:flex-row items-center gap-4 mb-4">
+            <div className="flex items-center md:flex-1">
               <img
                 alt="Harmony Association for Youth Logo"
                 src="/HayBlueLogo.png"
                 className="h-8 w-auto object-contain"
               />
             </div>
-            <div className="flex flex-col items-center md:items-start gap-2 md:ml-28">
-              <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                {navigation.programs.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-              <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                {navigation.support.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 mt-4">
-            <p className="text-sm/6 text-gray-600">
+            <p className="text-sm/6 text-gray-600 text-center md:flex-1">
               &copy; 2026 Harmony Association for Youth. All rights reserved.
             </p>
+            <div className="md:flex-1"></div>
+          </div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="md:flex-1"></div>
             <div className="flex gap-x-6">
               {navigation.social.map((item) => (
                 <a
