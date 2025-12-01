@@ -38,7 +38,10 @@ export default function Hero() {
                 className="bg-blue-950 text-white rounded-lg w-full sm:w-auto"
                 onClick={() => {
                   const element = document.querySelector('[data-section="our-mission"]');
-                  element?.scrollIntoView({ behavior: 'smooth' });
+                  if (element) {
+                    const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - 100;
+                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                  }
                 }}
               >
                 Learn about our mission

@@ -32,20 +32,31 @@ export default function Volunteer() {
               </p>
             </div>
 
-            {/* Certification Button */}
+            {/* Certification and Registration Buttons */}
             <div className="text-center pt-6 border-t border-blue-900/20">
               <p className="text-blue-900/80 mb-6 text-lg">
-                Please fill out the form below for volunteer certification:
+                Please fill out the appropriate form below:
               </p>
-              <Link
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfP6m_wQB9Q1Lj8_ijwf0AKe1wqcd8W8YyiaGlWb7kOuOfIbA/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-950 rounded-xl hover:bg-blue-900 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
-              >
-                <Award className="size-5 mr-2" />
-                Volunteer Certification Form
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link
+                  href="https://forms.gle/sSQHwvvbDnoHaTqs8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-950 rounded-xl hover:bg-blue-900 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  <Award className="size-5 mr-2" />
+                  Volunteer Registration Form
+                </Link>
+                <Link
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfP6m_wQB9Q1Lj8_ijwf0AKe1wqcd8W8YyiaGlWb7kOuOfIbA/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-950 rounded-xl hover:bg-blue-900 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  <Award className="size-5 mr-2" />
+                  Volunteer Certification Form
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 
 export default function JoinUs() {
@@ -13,11 +15,6 @@ export default function JoinUs() {
               <p className="mt-6 text-lg/8 text-neutral-700">
               Harmony Association for Youth (HAY) is a platform created, organized, and led by youth, designed to most effectively inspire their peers to use their talents and passion to serve the community. Here, young people form deep connections with the community, inspire one another, and grow together into better versions of themselves through contribution and creation. Every young person is seen as a valued designer and co-builder of the community.
               </p>
-              <div className="mt-8">
-                <Button className="bg-blue-950 text-white rounded-lg w-full sm:w-auto">
-                  Register as a volunteer
-                </Button>
-              </div>
             </div>
           </div>
           <div className="aspect-video rounded-3xl overflow-hidden sm:p-2 border border-white bg-white/30 backdrop-blur-md lg:scale-110">

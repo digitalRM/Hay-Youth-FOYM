@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { MicVocal, Spotlight, Theater } from "lucide-react";
 import Image from "next/image";
@@ -18,6 +20,7 @@ export default function CTA() {
             <Button
               variant="outline"
               className="rounded-xl text-blue-950 w-full sm:w-fit"
+              onClick={() => window.location.href = '/volunteer'}
             >
               Volunteer with us
             </Button>
