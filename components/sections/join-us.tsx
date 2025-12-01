@@ -9,7 +9,7 @@ export default function JoinUs() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center">
           <div className="lg:pr-4 lg:pt-4">
             <div className="lg:max-w-lg">
-              <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-blue-950 sm:text-5xl">
+              <p className="mt-2 text-pretty text-3xl font-semibold tracking-tight text-blue-950 sm:text-4xl">
                 Our Mission
               </p>
               <p className="mt-6 text-lg/8 text-neutral-700">
