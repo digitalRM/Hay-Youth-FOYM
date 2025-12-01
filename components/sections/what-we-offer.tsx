@@ -14,19 +14,19 @@ export default function WhatWeOffer() {
             <div>
               <p className="text-5xl sm:text-6xl font-bold text-blue-950 mb-4">6+</p>
               <p className="text-xl sm:text-2xl font-semibold text-blue-950">
-                Community Youth Concerts with different theme of culture topics
+                Community Youth Concerts with different theme or culture topics
               </p>
             </div>
             <div>
-              <p className="text-5xl sm:text-6xl font-bold text-blue-950 mb-4">2+</p>
+              <p className="text-5xl sm:text-6xl font-bold text-blue-950 mb-4">100+</p>
               <p className="text-xl sm:text-2xl font-semibold text-blue-950">
-                Concerts at Senior Centers sharing music with seniors
+                Youth Volunteers sharing their musical talents in service to the community
               </p>
             </div>
             <div>
-              <p className="text-5xl sm:text-6xl font-bold text-blue-950 mb-4">6+</p>
+              <p className="text-5xl sm:text-6xl font-bold text-blue-950 mb-4">10+</p>
               <p className="text-xl sm:text-2xl font-semibold text-blue-950">
-                Public Lectures Supporting Youth and improving youth communication
+                Community Event supporting youth and improving youth communication
               </p>
             </div>
           </div>
