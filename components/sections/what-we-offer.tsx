@@ -51,7 +51,7 @@ export default function WhatWeOffer() {
               />
               <Image
                 src="/two.png"
-                alt="HAY Community Program 2"
+                alt="HAY Community Program 2 "
                 width={640}
                 height={480}
                 className="w-full h-auto rounded-xl"
