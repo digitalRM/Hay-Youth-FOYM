@@ -20,9 +20,9 @@ export default function JoinUs() {
           <div className="aspect-video rounded-3xl overflow-hidden sm:p-2 border border-white bg-white/30 backdrop-blur-md lg:scale-110">
             <iframe
               className="w-full h-full rounded-2xl"
-              src="https://www.youtube.com/embed/nKMm9dHtLWw?autoplay=1&mute=1"
+              src="https://www.youtube.com/embed/nKMm9dHtLWw"
               title="HAY Youth Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />
           </div>

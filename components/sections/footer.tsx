@@ -56,21 +56,18 @@ export default function Footer() {
     <footer className="bg-blue-50/30">
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-8">
         <div className="border-t border-gray-900/10 pt-8">
-          <div className="flex flex-col md:flex-row items-center gap-4 mb-4">
-            <div className="flex items-center md:flex-1">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center">
               <img
                 alt="Harmony Association for Youth Logo"
                 src="/HayBlueLogo.png"
                 className="h-8 w-auto object-contain"
               />
             </div>
-            <p className="text-sm/6 text-gray-600 text-center md:flex-1">
-              &copy; 2026 Harmony Association for Youth. All rights reserved.
-            </p>
-            <div className="md:flex-1"></div>
-          </div>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="md:flex-1"></div>
+            <div className="text-sm/6 text-gray-600 text-center">
+              <p>&copy; 2026 Harmony Association for Youth.</p>
+              <p>A Nonprofit Corporation. All rights reserved.</p>
+            </div>
             <div className="flex gap-x-6">
               {navigation.social.map((item) => (
                 <a

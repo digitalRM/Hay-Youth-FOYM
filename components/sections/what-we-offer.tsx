@@ -39,15 +39,33 @@ export default function WhatWeOffer() {
               </p>
             </div>
           </div>
-          <div className="mt-8 w-full max-w-5xl mx-auto">
-            <Image
-              src="/save.png"
-              alt="HAY Programs"
-              width={1920}
-              height={600}
-              className="w-full h-auto rounded-xl"
-              priority
-            />
+          <div className="mt-8 w-full max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Image
+                src="/one.png"
+                alt="HAY Community Program 1"
+                width={640}
+                height={480}
+                className="w-full h-auto rounded-xl"
+                priority
+              />
+              <Image
+                src="/two.png"
+                alt="HAY Community Program 2"
+                width={640}
+                height={480}
+                className="w-full h-auto rounded-xl"
+                priority
+              />
+              <Image
+                src="/three.png"
+                alt="HAY Community Program 3"
+                width={640}
+                height={480}
+                className="w-full h-auto rounded-xl"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>

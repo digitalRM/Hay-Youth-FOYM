@@ -95,10 +95,9 @@ export default function Members() {
             {hayTeam.map((member) => (
               <div
                 key={member.name}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:shadow-xl hover:border-white/40 transition-all duration-700 ease-in-out text-center group overflow-hidden"
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:shadow-xl hover:border-white/40 transition-all duration-300 ease-in-out text-center group"
               >
-                {/* Default View */}
-                <div className="group-hover:opacity-0 group-hover:max-h-0 transition-all duration-700 ease-in-out overflow-hidden max-h-[500px] opacity-100">
+                {/* Profile Picture - Always Visible */}
                 <div className="relative w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
                   {member.imageSrc ? (
                     <Image
@@ -115,16 +114,22 @@ export default function Members() {
                     </div>
                   )}
                 </div>
+
+                {/* Name and Role - Always Visible */}
                 <h4 className="text-xl font-semibold text-blue-950 mb-1">
                   {member.name}
                 </h4>
                 <p className="text-blue-900/70 mb-3">{member.role}</p>
+
+                {/* Fun Fact - Fades Out on Hover */}
                 {member.funFact && (
-                  <p className="text-sm text-blue-900/60 mb-4">
+                  <p className="text-sm text-blue-900/60 mb-4 transition-all duration-300 group-hover:opacity-0 group-hover:max-h-0 group-hover:mb-0 overflow-hidden max-h-20 opacity-100">
                     {member.funFact}
                   </p>
                 )}
-                <div className="flex justify-center gap-3">
+
+                {/* Social Links - Fades Out on Hover */}
+                <div className="flex justify-center gap-3 transition-all duration-300 group-hover:opacity-0 group-hover:max-h-0 overflow-hidden max-h-10 opacity-100">
                   {member.linkedin && (
                     <Link
                       href={member.linkedin}
@@ -148,22 +153,15 @@ export default function Members() {
                     </Link>
                   )}
                 </div>
-              </div>
 
-                {/* Expanded View on Hover */}
-                <div className="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[2000px] transition-all duration-700 ease-in-out overflow-hidden">
-                  <h4 className="text-xl font-semibold text-blue-950 mb-3">
-                    {member.name}
-                  </h4>
-                  <p className="text-blue-900/80 mb-3 font-medium">{member.role}</p>
-                  {member.description && (
-                    <div className="text-sm text-blue-900/70 text-left leading-relaxed space-y-3">
-                      {member.description.split('\n\n').map((paragraph, idx) => (
-                        <p key={idx}>{paragraph}</p>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                {/* Description - Expands Smoothly on Hover */}
+                {member.description && (
+                  <div className="text-sm text-blue-900/70 text-left leading-relaxed space-y-3 mt-4 transition-all duration-500 ease-in-out opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[2000px]">
+                    {member.description.split('\n\n').map((paragraph, idx) => (
+                      <p key={idx}>{paragraph}</p>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
