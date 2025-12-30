@@ -7,69 +7,30 @@ import Nav from "@/components/sections/nav";
 import Footer from "@/components/sections/footer";
 
 // Import all event data - this should match the data from the main events page
-const allEvents = {
-  concerts: {
-    2023: [
-      { title: "Spring Concert 2023", description: "Celebrating cultural diversity through music", image: "/1.png", slug: "spring-concert-2023" },
-      { title: "Summer Music Festival", description: "Youth talents shine on stage", image: "/2.png", slug: "summer-music-festival-2023" },
-    ],
-    2024: [
-      { title: "Winter Harmony Concert", description: "Holiday celebration with the community", image: "/3.png", slug: "winter-harmony-concert-2024" },
-      { title: "Youth Music Showcase", description: "Featuring talented young musicians", image: "/1.png", slug: "youth-music-showcase-2024" },
-    ],
-    2025: [
-      { title: "Spring Performance 2025", description: "New voices, new stories", image: "/2.png", slug: "spring-performance-2025" },
-      { title: "Community Music Night", description: "Bringing people together through song", image: "/3.png", slug: "community-music-night-2025" },
-    ],
-    2026: [
-      { title: "Upcoming Concert", description: "Stay tuned for more details", image: "/1.png", slug: "upcoming-concert-2026" },
-    ],
+const allEvents = [
+  { 
+    title: "Lunar New Year Youth Concert", 
+    description: "We organize this event to bring people together through music, food, and cultural celebration. Each year, more than 100 attendees join us to enjoy the festivities. We decorate the venue, share diverse cultural traditions, and strengthen connections within the community. This event fosters communication, creates a sense of belonging, and especially supports immigrants in building strong ties with the community.", 
+    image: "/1.png", 
+    slug: "lunar-new-year-youth-concert" 
   },
-  lectures: {
-    2023: [
-      { title: "Leadership Workshop", description: "Building tomorrow's leaders today", image: "/2.png", slug: "leadership-workshop-2023" },
-      { title: "Academic Success Seminar", description: "Strategies for student achievement", image: "/3.png", slug: "academic-success-seminar-2023" },
-    ],
-    2024: [
-      { title: "Career Pathways Talk", description: "Exploring future opportunities", image: "/1.png", slug: "career-pathways-talk-2024" },
-      { title: "Community Service Forum", description: "Making a difference together", image: "/2.png", slug: "community-service-forum-2024" },
-    ],
-    2025: [
-      { title: "Innovation in Education", description: "New approaches to learning", image: "/3.png", slug: "innovation-in-education-2025" },
-      { title: "Youth Empowerment Series", description: "Inspiring the next generation", image: "/1.png", slug: "youth-empowerment-series-2025" },
-    ],
-    2026: [
-      { title: "Upcoming Lecture", description: "More information coming soon", image: "/2.png", slug: "upcoming-lecture-2026" },
-    ],
+  { 
+    title: "Family Ties in Harmony", 
+    description: "Every year, we host youth events at Third Place Commons with special themes for occasions like Mother's Day and Father's Day. These events strengthen family connections, showcase youth appreciation for family and community, and highlight their contributions. Through music and performances, youth entertain and enrich the public space, bringing melody and joy to the community.", 
+    image: "/2.png", 
+    slug: "family-ties-in-harmony" 
   },
-  community: {
-    2023: [
-      { title: "Community Gathering 2023", description: "Building stronger connections", image: "/3.png", slug: "community-gathering-2023" },
-      { title: "Youth Service Day", description: "Giving back to our community", image: "/1.png", slug: "youth-service-day-2023" },
-    ],
-    2024: [
-      { title: "Cultural Festival", description: "Celebrating our diversity", image: "/2.png", slug: "cultural-festival-2024" },
-      { title: "Leadership Summit", description: "Youth voices, community impact", image: "/3.png", slug: "leadership-summit-2024" },
-    ],
-    2025: [
-      { title: "Spring Community Fair", description: "Fun, food, and friendship", image: "/1.png", slug: "spring-community-fair-2025" },
-      { title: "Volunteer Appreciation", description: "Honoring our dedicated volunteers", image: "/2.png", slug: "volunteer-appreciation-2025" },
-    ],
-    2026: [
-      { title: "Upcoming Event", description: "Details to be announced", image: "/3.png", slug: "upcoming-event-2026" },
-    ],
+  { 
+    title: "Youth Melody for Seniors", 
+    description: "The youth group performs regularly at the Senior Center, especially during holidays. They bring festive music during the holiday season and provide entertainment that brightens the lives of seniors.", 
+    image: "/3.png", 
+    slug: "youth-melody-for-seniors" 
   },
-};
+];
 
 // Helper function to find an event by slug
 function findEventBySlug(slug: string) {
-  for (const category of Object.values(allEvents)) {
-    for (const yearEvents of Object.values(category)) {
-      const event = yearEvents.find((e) => e.slug === slug);
-      if (event) return event;
-    }
-  }
-  return null;
+  return allEvents.find((e) => e.slug === slug) || null;
 }
 
 export default function EventPage({ params }: { params: Promise<{ slug: string }> }) {

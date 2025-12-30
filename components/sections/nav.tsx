@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navigation = [
@@ -10,15 +10,20 @@ const navigation = [
   { name: "Our Team", href: "/members" },
 ];
 
-const eventsDropdown = [
-  { name: "Concerts", href: "/events#concerts" },
-  { name: "Lectures", href: "/events#lectures" },
-  { name: "Community Event", href: "/events#community-event" },
+const youthConcertDropdown = [
+  { name: "Lunar New Year Youth Concert", href: "/events/lunar-new-year-youth-concert" },
+  { name: "Family Ties in Harmony", href: "/events/family-ties-in-harmony" },
+  { name: "Youth Melody for Seniors", href: "/events/youth-melody-for-seniors" },
+];
+
+const otherNavigation = [
+  { name: "Community Events", href: "/events#community-events" },
+  { name: "Youth Volunteer", href: "/volunteer" },
 ];
 
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [eventsDropdownOpen, setEventsDropdownOpen] = useState(false);
+  const [youthConcertDropdownOpen, setYouthConcertDropdownOpen] = useState(false);
 
   return (
     <header className="fixed top-0 w-full z-50 bg-white shadow-lg">
@@ -57,24 +62,26 @@ export default function Nav() {
             </a>
           ))}
           
-          {/* Events Dropdown */}
+          {/* Youth Concert Dropdown */}
           <div 
             className="relative"
-            onMouseEnter={() => setEventsDropdownOpen(true)}
-            onMouseLeave={() => setEventsDropdownOpen(false)}
+            onMouseEnter={() => setYouthConcertDropdownOpen(true)}
+            onMouseLeave={() => setYouthConcertDropdownOpen(false)}
           >
             <a
-              href="/events"
+              href="/events#youth-concert"
               className="text-lg font-semibold text-neutral-900 hover:text-blue-950 transition-colors flex items-center gap-1 py-2"
             >
-              Events
-              <ChevronDown className="size-4" />
+              Youth Concert
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
             </a>
             
-            {eventsDropdownOpen && (
-              <div className="absolute top-full left-0 pt-2 w-48 z-50">
+            {youthConcertDropdownOpen && (
+              <div className="absolute top-full left-0 pt-2 w-64 z-50">
                 <div className="bg-white rounded-lg shadow-lg border border-neutral-200 py-2">
-                  {eventsDropdown.map((item) => (
+                  {youthConcertDropdown.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
@@ -88,13 +95,15 @@ export default function Nav() {
             )}
           </div>
           
-          {/* Youth Volunteer */}
-          <a
-            href="/volunteer"
-            className="text-lg font-semibold text-neutral-900 hover:text-blue-950 transition-colors"
-          >
-            Youth Volunteer
-          </a>
+          {otherNavigation.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-lg font-semibold text-neutral-900 hover:text-blue-950 transition-colors"
+            >
+              {item.name}
+            </a>
+          ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Button className="rounded-full bg-blue-950 text-white text-base px-6 py-2">
@@ -140,16 +149,16 @@ export default function Nav() {
                   </a>
                 ))}
                 
-                {/* Events Section in Mobile Menu */}
+                {/* Youth Concert Section in Mobile Menu */}
                 <div className="-mx-3">
                   <a
-                    href="/events"
+                    href="/events#youth-concert"
                     className="block px-3 py-2 text-lg font-semibold text-neutral-900 hover:bg-neutral-50 rounded-lg"
                   >
-                    Events
+                    Youth Concert
                   </a>
                   <div className="pl-6 space-y-2">
-                    {eventsDropdown.map((item) => (
+                    {youthConcertDropdown.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
@@ -161,13 +170,15 @@ export default function Nav() {
                   </div>
                 </div>
                 
-                {/* Youth Volunteer in Mobile Menu */}
-                <a
-                  href="/volunteer"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-lg font-semibold text-neutral-900 hover:bg-neutral-50"
-                >
-                  Youth Volunteer
-                </a>
+                {otherNavigation.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="-mx-3 block rounded-lg px-3 py-2 text-lg font-semibold text-neutral-900 hover:bg-neutral-50"
+                  >
+                    {item.name}
+                  </a>
+                ))}
               </div>
               <div className="py-6">
                 <Button
