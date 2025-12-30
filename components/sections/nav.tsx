@@ -2,19 +2,23 @@
 
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Our Team", href: "/members" },
-  { name: "Youth Concert", href: "#" },
-  { name: "Community Event", href: "#" },
-  { name: "Youth Volunteer", href: "/volunteer" },
+];
+
+const eventsDropdown = [
+  { name: "Concerts", href: "/events#concerts" },
+  { name: "Lectures", href: "/events#lectures" },
+  { name: "Community Event", href: "/events#community-event" },
 ];
 
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [eventsDropdownOpen, setEventsDropdownOpen] = useState(false);
 
   return (
     <header className="fixed top-0 w-full z-50 bg-white shadow-lg">
@@ -42,7 +46,7 @@ export default function Nav() {
             <Menu aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-8">
+        <div className="hidden lg:flex lg:gap-x-8 lg:items-center">
           {navigation.map((item) => (
             <a
               key={item.name}
@@ -52,6 +56,45 @@ export default function Nav() {
               {item.name}
             </a>
           ))}
+          
+          {/* Events Dropdown */}
+          <div 
+            className="relative"
+            onMouseEnter={() => setEventsDropdownOpen(true)}
+            onMouseLeave={() => setEventsDropdownOpen(false)}
+          >
+            <a
+              href="/events"
+              className="text-lg font-semibold text-neutral-900 hover:text-blue-950 transition-colors flex items-center gap-1 py-2"
+            >
+              Events
+              <ChevronDown className="size-4" />
+            </a>
+            
+            {eventsDropdownOpen && (
+              <div className="absolute top-full left-0 pt-2 w-48 z-50">
+                <div className="bg-white rounded-lg shadow-lg border border-neutral-200 py-2">
+                  {eventsDropdown.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="block px-4 py-2 text-base font-medium text-neutral-900 hover:bg-blue-50 hover:text-blue-950 transition-colors"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+          
+          {/* Youth Volunteer */}
+          <a
+            href="/volunteer"
+            className="text-lg font-semibold text-neutral-900 hover:text-blue-950 transition-colors"
+          >
+            Youth Volunteer
+          </a>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Button className="rounded-full bg-blue-950 text-white text-base px-6 py-2">
@@ -96,12 +139,41 @@ export default function Nav() {
                     {item.name}
                   </a>
                 ))}
+                
+                {/* Events Section in Mobile Menu */}
+                <div className="-mx-3">
+                  <a
+                    href="/events"
+                    className="block px-3 py-2 text-lg font-semibold text-neutral-900 hover:bg-neutral-50 rounded-lg"
+                  >
+                    Events
+                  </a>
+                  <div className="pl-6 space-y-2">
+                    {eventsDropdown.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="block rounded-lg px-3 py-2 text-base font-medium text-neutral-700 hover:bg-neutral-50"
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Youth Volunteer in Mobile Menu */}
+                <a
+                  href="/volunteer"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-lg font-semibold text-neutral-900 hover:bg-neutral-50"
+                >
+                  Youth Volunteer
+                </a>
               </div>
               <div className="py-6">
                 <Button
                   className="rounded-full bg-blue-950 text-white w-full text-base py-2"
                 >
-                  Our Events
+                  Donate to our cause
                 </Button>
               </div>
             </div>
