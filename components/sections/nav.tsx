@@ -17,7 +17,7 @@ const youthConcertDropdown = [
 ];
 
 const otherNavigation = [
-  { name: "Community Events", href: "/community-events" },
+  { name: "Community Event", href: "/community-events" },
   { name: "Youth Volunteer", href: "/volunteer" },
 ];
 
