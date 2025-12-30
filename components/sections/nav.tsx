@@ -11,13 +11,13 @@ const navigation = [
 ];
 
 const youthConcertDropdown = [
-  { name: "Lunar New Year Youth Concert", href: "/events/lunar-new-year-youth-concert" },
-  { name: "Family Ties in Harmony", href: "/events/family-ties-in-harmony" },
-  { name: "Youth Melody for Seniors", href: "/events/youth-melody-for-seniors" },
+  { name: "Lunar New Year Youth Concert", href: "/events#lunar-new-year" },
+  { name: "Family Ties in Harmony", href: "/events#family-ties" },
+  { name: "Youth Melody for Seniors", href: "/events#youth-melody" },
 ];
 
 const otherNavigation = [
-  { name: "Community Events", href: "/events#community-events" },
+  { name: "Community Events", href: "/community-events" },
   { name: "Youth Volunteer", href: "/volunteer" },
 ];
 
@@ -51,12 +51,12 @@ export default function Nav() {
             <Menu aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-8 lg:items-center">
+        <div className="hidden lg:flex lg:gap-x-6 lg:items-center lg:ml-8">
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-lg font-semibold text-neutral-900 hover:text-blue-950 transition-colors"
+              className="text-base font-semibold text-neutral-900 hover:text-blue-950 transition-colors"
             >
               {item.name}
             </a>
@@ -69,8 +69,8 @@ export default function Nav() {
             onMouseLeave={() => setYouthConcertDropdownOpen(false)}
           >
             <a
-              href="/events#youth-concert"
-              className="text-lg font-semibold text-neutral-900 hover:text-blue-950 transition-colors flex items-center gap-1 py-2"
+              href="/events"
+              className="text-base font-semibold text-neutral-900 hover:text-blue-950 transition-colors flex items-center gap-1 py-2"
             >
               Youth Concert
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,7 +85,7 @@ export default function Nav() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="block px-4 py-2 text-base font-medium text-neutral-900 hover:bg-blue-50 hover:text-blue-950 transition-colors"
+                      className="block px-4 py-2 text-sm font-medium text-neutral-900 hover:bg-blue-50 hover:text-blue-950 transition-colors"
                     >
                       {item.name}
                     </a>
@@ -99,7 +99,7 @@ export default function Nav() {
             <a
               key={item.name}
               href={item.href}
-              className="text-lg font-semibold text-neutral-900 hover:text-blue-950 transition-colors"
+              className="text-base font-semibold text-neutral-900 hover:text-blue-950 transition-colors"
             >
               {item.name}
             </a>
