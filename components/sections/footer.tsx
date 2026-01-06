@@ -54,7 +54,7 @@ const navigation = {
 export default function Footer() {
   return (
     <footer className="bg-blue-50/30">
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-8">
+      <div className="mx-auto max-w-5xl px-6 pb-8 pt-8">
         <div className="border-t border-gray-900/10 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center">

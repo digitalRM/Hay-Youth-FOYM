@@ -1,35 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import Nav from "@/components/sections/nav";
 import Footer from "@/components/sections/footer";
-
-
-// Youth Concert Categories - these are categories, not individual events
-const youthConcertCategories = [
-  {
-    title: "Lunar New Year Youth Concert",
-    description: "We organize this event to bring people together through music, food, and cultural celebration. Each year, more than 100 attendees join us to enjoy the festivities. We decorate the venue, share diverse cultural traditions, and strengthen connections within the community. This event fosters communication, creates a sense of belonging, and especially supports immigrants in building strong ties with the community.",
-  },
-  {
-    title: "Family Ties in Harmony",
-    description: "Every year, we host youth events at Third Place Commons with special themes for occasions like Mother's Day and Father's Day. These events strengthen family connections, showcase youth appreciation for family and community, and highlight their contributions. Through music and performances, youth entertain and enrich the public space, bringing melody and joy to the community.",
-  },
-  {
-    title: "Youth Melody for Seniors",
-    description: "The youth group performs regularly at the Senior Center, especially during holidays. They bring festive music during the holiday season and provide entertainment that brightens the lives of seniors.",
-  },
-];
-
-// Community Events - empty for now
-const communityEvents: EventButtonProps[] = [];
-
-interface EventButtonProps {
-  title: string;
-  description: string;
-  image: string;
-  slug: string;
-}
+import { lunarNewYearEvents, familyTiesEvents, youthMelodyEvents } from "./eventsData";
 
 
 export default function EventsPage() {
@@ -37,7 +12,7 @@ export default function EventsPage() {
     <div className="font-sans flex-col flex w-screen relative scroll-smooth overflow-x-hidden">
       <Nav />
       <div className="relative bg-[url('/backgroundBlue.png')] bg-cover bg-center min-h-screen">
-        <div className="pt-24 pb-16">
+        <div className="pt-32 pb-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {/* Page Header */}
             <div className="text-center mb-16">
@@ -56,7 +31,31 @@ export default function EventsPage() {
                 <p className="text-base text-blue-900/80 leading-relaxed mb-8">
                   We organize this event to bring people together through music, food, and cultural celebration. Each year, more than 100 attendees join us to enjoy the festivities. We decorate the venue, share diverse cultural traditions, and strengthen connections within the community. This event fosters communication, creates a sense of belonging, and especially supports immigrants in building strong ties with the community.
                 </p>
-                <p className="text-center text-blue-900/70 text-lg">No upcoming events at this time.</p>
+                
+                {/* Events Grid */}
+                {lunarNewYearEvents.length > 0 ? (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {lunarNewYearEvents.map((event) => (
+                      <Link key={event.id} href={`/events/event/${event.id}`} className="group">
+                        <div className="bg-white/80 backdrop-blur-sm rounded-xl border border-white/20 shadow-md hover:shadow-xl hover:border-white/40 transition-all duration-300 overflow-hidden">
+                          <div className="relative w-full aspect-[3/4]">
+                            <Image
+                              src={event.image}
+                              alt={event.title}
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                          </div>
+                          <div className="p-4 bg-white/50">
+                            <p className="text-sm font-semibold text-blue-950">Date: {event.date}</p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-center text-blue-900/70 text-lg">No upcoming events at this time.</p>
+                )}
               </div>
             </section>
 
@@ -67,7 +66,31 @@ export default function EventsPage() {
                 <p className="text-base text-blue-900/80 leading-relaxed mb-8">
                   Every year, we host youth events at Third Place Commons with special themes for occasions like Mother's Day and Father's Day. These events strengthen family connections, showcase youth appreciation for family and community, and highlight their contributions. Through music and performances, youth entertain and enrich the public space, bringing melody and joy to the community.
                 </p>
-                <p className="text-center text-blue-900/70 text-lg">No upcoming events at this time.</p>
+                
+                {/* Events Grid */}
+                {familyTiesEvents.length > 0 ? (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {familyTiesEvents.map((event) => (
+                      <Link key={event.id} href={`/events/event/${event.id}`} className="group">
+                        <div className="bg-white/80 backdrop-blur-sm rounded-xl border border-white/20 shadow-md hover:shadow-xl hover:border-white/40 transition-all duration-300 overflow-hidden">
+                          <div className="relative w-full aspect-[3/4]">
+                            <Image
+                              src={event.image}
+                              alt={event.title}
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                          </div>
+                          <div className="p-4 bg-white/50">
+                            <p className="text-sm font-semibold text-blue-950">Date: {event.date}</p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-center text-blue-900/70 text-lg">No upcoming events at this time.</p>
+                )}
               </div>
             </section>
 
@@ -78,7 +101,31 @@ export default function EventsPage() {
                 <p className="text-base text-blue-900/80 leading-relaxed mb-8">
                   The youth group performs regularly at the Senior Center, especially during holidays. They bring festive music during the holiday season and provide entertainment that brightens the lives of seniors.
                 </p>
-                <p className="text-center text-blue-900/70 text-lg">No upcoming events at this time.</p>
+                
+                {/* Events Grid */}
+                {youthMelodyEvents.length > 0 ? (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {youthMelodyEvents.map((event) => (
+                      <Link key={event.id} href={`/events/event/${event.id}`} className="group">
+                        <div className="bg-white/80 backdrop-blur-sm rounded-xl border border-white/20 shadow-md hover:shadow-xl hover:border-white/40 transition-all duration-300 overflow-hidden">
+                          <div className="relative w-full aspect-[3/4]">
+                            <Image
+                              src={event.image}
+                              alt={event.title}
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                          </div>
+                          <div className="p-4 bg-white/50">
+                            <p className="text-sm font-semibold text-blue-950">Date: {event.date}</p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-center text-blue-900/70 text-lg">No upcoming events at this time.</p>
+                )}
               </div>
             </section>
           </div>

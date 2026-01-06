@@ -7,7 +7,7 @@ import Link from "next/link";
 const hayTeam = [
   {
     name: "Carolyn Xu",
-    role: "Youth Leader",
+    role: "Youth Event Leader",
     description: "Carolyn Xu has been an active member of HAY since its inception, contributing significantly to the organization's development and growth. She is passionate about music and enjoys playing both the piano and violin, as well as exploring photography and creating vibrant handmade crafts.\n\nCarolyn helps organize youth music events that give back to the community and foster meaningful connections through music. She also manages and updates HAY's YouTube channel, using her creativity to produce and edit videos that capture and preserve special moments.\n\nProud to be part of HAY's journey, Carolyn remains dedicated to helping the organization grow and strengthen the community through creativity and collaboration.",
     funFact: "Loves music, photography, and creating handmade crafts",
     linkedin: "", // To be provided later
@@ -16,7 +16,7 @@ const hayTeam = [
   },
   {
     name: "Felix Wu",
-    role: "Youth Leader",
+    role: "Web Team Leader",
     description: "Felix plays an active role in designing and maintaining HAY's website. While gaming is one of his favorite hobbies, his deeper passion lies in empowering and supporting young people in achieving their dreams through HAY.\n\nHe joined HAY because he truly believes in its mission. As a young person himself, Felix understands the importance of having guidance, support, and access to the right resources when pursuing one's goals. HAY's dedication to helping youth reach their full potential deeply resonated with him and inspired his involvement.\n\nThrough his work on the website, Felix aims to strengthen HAY's digital presence and expand its reach. His contributions have already helped the organization connect with a broader audience, and he looks forward to continuing to improve and grow HAY's online platform to make an even greater impact.",
     funFact: "Passionate about technology and community impact",
     linkedin: "", // To be provided later
@@ -25,7 +25,7 @@ const hayTeam = [
   },
   {
     name: "Helen Zhang",
-    role: "Youth Leader",
+    role: "Youth Event Manager",
     description: "Helen Zhang is a student at Inglemoor High School who joined HAY out of a passion for making a positive impact in the community and connecting with new people. Outside of her academic and volunteer commitments, she enjoys dancing, spending time with friends, reading, and practicing gymnastics.",
     funFact: "Dedicated to empowering youth voices",
     linkedin: "", // To be provided later
@@ -34,7 +34,7 @@ const hayTeam = [
   },
   {
     name: "Tristan Ye",
-    role: "Youth Leader",
+    role: "Web Team Manager",
     description: "Tristan Ye is a student at Inglemoor High School in Kenmore, Washington. Outside the classroom, he can often be found on the soccer field, immersed in a game of chess, strumming his guitar, coding, or exploring new video games.\n\nA dedicated volunteer at HAY, Tristan contributes to building and maintaining the organization's website. His experiences on the soccer field have taught him teamwork, dedication, and resilience—qualities that translate directly into his collaborative work at HAY.\n\nTristan's passion for chess sharpens his strategic thinking and composure under pressure, while his love for music allows him to connect with others through creativity and expression. His interests in coding and gaming further fuel his problem-solving skills and curiosity about the digital world.\n\nThrough his volunteer work with HAY, Tristan has been able to combine his diverse skills and passions to support the organization's digital presence and strengthen its community outreach efforts.",
     funFact: "Committed to building innovative solutions",
     linkedin: "", // To be provided later
@@ -43,7 +43,7 @@ const hayTeam = [
   },
   {
     name: "Jeffrey Jiang",
-    role: "Youth Leader",
+    role: "Web Team Manager",
     description: "Jeffrey Jiang is a junior at North Creek High School who enjoys spending his time playing video games with friends and working out. He joined HAY because he believes in its mission to create opportunities for youth to serve and connect with the community.\n\nAs a volunteer, Jeffrey hopes to help more people feel a stronger sense of belonging within the community. He is dedicated to improving HAY's website to make it more user-friendly and inclusive for everyone.",
     funFact: "Tech enthusiast and problem solver",
     linkedin: "", // To be provided later

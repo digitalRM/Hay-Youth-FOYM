@@ -9,7 +9,7 @@ export default function CommunityEventsPage() {
     <div className="font-sans flex-col flex w-screen relative scroll-smooth overflow-x-hidden">
       <Nav />
       <div className="relative bg-[url('/backgroundBlue.png')] bg-cover bg-center min-h-screen">
-        <div className="pt-24 pb-16">
+        <div className="pt-32 pb-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {/* Page Header */}
             <div className="text-center mb-16">
@@ -21,9 +21,10 @@ export default function CommunityEventsPage() {
               </p>
             </div>
 
-            {/* Community Events Section */}
-            <section className="mb-12">
+            {/* Public Lecture Section */}
+            <section id="public-lecture" className="mb-12 scroll-mt-24">
               <div className="bg-blue-50/30 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-white/20 shadow-lg">
+                <h2 className="text-5xl font-semibold text-blue-950 text-left mb-6">Public Lecture</h2>
                 <p className="text-center text-blue-900/70 text-lg">No upcoming events at this time.</p>
               </div>
             </section>
@@ -56,6 +57,7 @@ export default function CommunityEventsPage() {
     </div>
   );
 }
+
 
 
 
