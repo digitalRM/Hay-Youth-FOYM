@@ -24,7 +24,7 @@ export default function CommunityEventsPage() {
             {/* Public Lecture Section */}
             <section id="public-lecture" className="mb-12 scroll-mt-24">
               <div className="bg-blue-50/30 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-white/20 shadow-lg">
-                <h2 className="text-5xl font-semibold text-blue-950 text-left mb-6">Public Lecture</h2>
+                <h2 className="text-3xl font-semibold text-blue-950 text-left mb-6">Public Lecture</h2>
                 <p className="text-center text-blue-900/70 text-lg">No upcoming events at this time.</p>
               </div>
             </section>

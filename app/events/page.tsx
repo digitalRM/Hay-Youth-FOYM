@@ -27,7 +27,7 @@ export default function EventsPage() {
             {/* Lunar New Year Youth Concert Section */}
             <section id="lunar-new-year" className="mb-20 scroll-mt-24">
               <div className="bg-blue-50/30 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-white/20 shadow-lg">
-                <h2 className="text-5xl font-semibold text-blue-950 text-left mb-6">Lunar New Year Youth Concert</h2>
+                <h2 className="text-3xl font-semibold text-blue-950 text-left mb-6">Lunar New Year Youth Concert</h2>
                 <p className="text-base text-blue-900/80 leading-relaxed mb-8">
                   We organize this event to bring people together through music, food, and cultural celebration. Each year, more than 100 attendees join us to enjoy the festivities. We decorate the venue, share diverse cultural traditions, and strengthen connections within the community. This event fosters communication, creates a sense of belonging, and especially supports immigrants in building strong ties with the community.
                 </p>
@@ -62,7 +62,7 @@ export default function EventsPage() {
             {/* Family Ties in Harmony Section */}
             <section id="family-ties" className="mb-20 scroll-mt-24">
               <div className="bg-blue-50/30 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-white/20 shadow-lg">
-                <h2 className="text-5xl font-semibold text-blue-950 text-left mb-6">Family Ties in Harmony</h2>
+                <h2 className="text-3xl font-semibold text-blue-950 text-left mb-6">Family Ties in Harmony</h2>
                 <p className="text-base text-blue-900/80 leading-relaxed mb-8">
                   Every year, we host youth events at Third Place Commons with special themes for occasions like Mother's Day and Father's Day. These events strengthen family connections, showcase youth appreciation for family and community, and highlight their contributions. Through music and performances, youth entertain and enrich the public space, bringing melody and joy to the community.
                 </p>
@@ -97,7 +97,7 @@ export default function EventsPage() {
             {/* Youth Melody for Seniors Section */}
             <section id="youth-melody" className="mb-12 scroll-mt-24">
               <div className="bg-blue-50/30 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-white/20 shadow-lg">
-                <h2 className="text-5xl font-semibold text-blue-950 text-left mb-6">Youth Melody for Seniors</h2>
+                <h2 className="text-3xl font-semibold text-blue-950 text-left mb-6">Youth Melody for Seniors</h2>
                 <p className="text-base text-blue-900/80 leading-relaxed mb-8">
                   The youth group performs regularly at the Senior Center, especially during holidays. They bring festive music during the holiday season and provide entertainment that brightens the lives of seniors.
                 </p>
