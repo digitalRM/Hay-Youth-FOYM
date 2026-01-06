@@ -20,7 +20,7 @@ export default function EventsPage() {
                 Youth Concert Programs
               </h1>
               <p className="text-lg text-blue-900/70 max-w-2xl mx-auto leading-relaxed">
-                Discover the various ways HAY Youth connects with and serves our community through music
+                Discover the various ways HAY Youth connects<br />with and serves our community through music
               </p>
             </div>
 
