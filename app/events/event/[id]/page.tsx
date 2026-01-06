@@ -64,7 +64,7 @@ export default function EventDetailPage({ params }: { params: Promise<{ id: stri
 
                 {/* Right: Event Details */}
                 <div className="flex flex-col justify-start">
-                  <h1 className="text-4xl sm:text-5xl font-semibold text-blue-950 mb-4">
+                  <h1 className="text-3xl sm:text-4xl font-semibold text-blue-950 mb-4">
                     {event.title}
                   </h1>
                   
